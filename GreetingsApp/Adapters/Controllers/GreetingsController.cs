@@ -24,13 +24,15 @@ namespace GreetingsApp.Adapters.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        [ResponseCache(CacheProfileName = "Never")]
+         public async Task<IActionResult> Get()
         {
             var greetings = await _queryProcessor.ExecuteAsync(new GreetingsAllQuery());
             return Ok(greetings.Greetings);
         }
 
         [HttpGet("{id}", Name = "GetGreeting")]
+        [ResponseCache(CacheProfileName = "Default")]
         public async Task<IActionResult> GetById(Guid id)
         {
             var greeting = await _queryProcessor.ExecuteAsync(new GreetingsByIdQuery(id));
