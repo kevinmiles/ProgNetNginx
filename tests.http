@@ -14,7 +14,7 @@ Content-Type: application/json
 
 ### Now see that greeting
 
-GET http://localhost:8080/api/Greetings/{b318377a-9718-46d4-bc42-508068e55ccd} HTTP/1.1
+GET http://localhost:8080/api/Greetings/{ec687094-dc8d-4f85-9c35-269cbe7c5ee2} HTTP/1.1
 
 
 ### Now add some more greetings
