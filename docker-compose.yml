@@ -1,18 +1,10 @@
 version: '3.1'
 services:
-  reverse-proxy:
-    build: ./nginx
-    ports:
-     - "8080:80"
-    links:
-     - web:greetingsweb
-    depends_on:
-     - web
   web:
     build: ./GreetingsApp
     hostname: greetingsweb
-    expose:
-      - "5000"
+    ports:
+     - "8080:80"
     environment:
       - Database__Greetings=Server=greetings_db;Uid=root;Pwd=root;Database=Greetings
       - Database__GreetingsDb=Server=greetings_db;Uid=root;Pwd=root
