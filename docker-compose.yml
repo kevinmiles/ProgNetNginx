@@ -3,7 +3,7 @@ services:
   reverse-proxy:
     build: ./nginx
     ports:
-     - "8080:80"
+     - "4430:443"
     links:
      - web:greetingsweb
     depends_on:
