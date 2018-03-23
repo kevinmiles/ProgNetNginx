@@ -2,6 +2,10 @@
 
 GET http://localhost:8080/greetings HTTP/1.1
 
+### This is the same post-URL rewriting
+
+GET http://localhost:8080/api/Greetings HTTP/1.1
+
 
 ### Now add a Greetings
 
